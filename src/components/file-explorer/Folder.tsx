@@ -69,7 +69,7 @@ export const Folder = ({
   };
 
   const handleSubmit = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") {
+    if (e.key === "Enter" && inputText) {
       handleAddNewFolder({
         id,
         name: inputText,

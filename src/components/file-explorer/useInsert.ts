@@ -1,8 +1,8 @@
-import type { FileExplorer } from "./types";
+import type { FileExplorerType } from "./types";
 
 const useInsert = () => {
   function insertNode(
-    folders: FileExplorer[],
+    folders: FileExplorerType[],
     folderId: string,
     fileName: string,
     isFolder: boolean
@@ -34,28 +34,8 @@ const useInsert = () => {
     return folders;
   }
 
-  //   function updateFileName(
-  //     folders: FileExplorer[],
-  //     folderId: string,
-  //     fileName: string,
-  //     isFolder: boolean
-  //   ) {
-  //     const isFirst = folders[0];
-  //     if (isFirst.id === folderId) {
-  //       isFirst.children?.unshift({
-  //         id: `${new Date().getDate()}`,
-  //         name: fileName,
-  //         isFolder: isFolder,
-  //         children: [],
-  //       });
-
-  //       return [isFirst];
-  //     }
-  //   }
-
   return {
     insertNode,
-    // updateFileName,
   };
 };
 

@@ -3,10 +3,10 @@ import "./style.css";
 import { Folder } from "./Folder";
 import { useState } from "react";
 import useInsert from "./useInsert";
-import type { FileExplorer } from "./types";
+import type { FileExplorerType } from "./types";
 
-export const FileExploer = () => {
-  const [folders, setFolders] = useState<FileExplorer[]>(data);
+export const FileExplorer = () => {
+  const [folders, setFolders] = useState<FileExplorerType[]>(data);
 
   const { insertNode } = useInsert();
 
@@ -21,7 +21,7 @@ export const FileExploer = () => {
   }) => {
     const newPairs = insertNode(folders, id, name, isFolder);
 
-    setFolders(newPairs as FileExplorer[]);
+    setFolders(newPairs as FileExplorerType[]);
   };
 
   return (

@@ -1,1 +1,1 @@
-export { FileExploer } from "./file-explorer/FileExploer";
+export { FileExplorer } from "./file-explorer/FileExplorer";

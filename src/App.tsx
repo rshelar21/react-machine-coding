@@ -1,4 +1,4 @@
-import { FileExploer } from "./components";
+import { FileExplorer } from "./components";
 
 function App() {
   return (
@@ -7,7 +7,7 @@ function App() {
         margin: "4px",
       }}
     >
-      <FileExploer />
+      <FileExplorer />
     </div>
   );
 }
