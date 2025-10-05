@@ -1,4 +1,4 @@
-import type { FileExplorerType } from "./types";
+import type { FileExplorerType } from "../types/file";
 
 const useInsert = () => {
   function insertNode(
@@ -11,7 +11,7 @@ const useInsert = () => {
     const isFirst = folders[0];
     if (isFirst.id === folderId && isFirst.isFolder) {
       isFirst.children?.unshift({
-        id: `${new Date().getDate()}`,
+        id: `${new Date().getTime()}`,
         name: fileName,
         isFolder: isFolder,
         children: [],
@@ -20,18 +20,11 @@ const useInsert = () => {
       return [isFirst];
     }
 
-    const foundItem = isFirst?.children?.find((item) => item?.id === folderId);
+    isFirst?.children?.map((item) => {
+      return insertNode([item], folderId, fileName, isFolder);
+    });
 
-    if (foundItem) {
-      foundItem.children?.unshift({
-        id: `${new Date().getDate()}`,
-        name: fileName,
-        isFolder: isFolder,
-        children: [],
-      });
-    }
-
-    return folders;
+    return [...folders];
   }
 
   return {

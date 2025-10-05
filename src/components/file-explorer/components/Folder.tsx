@@ -1,19 +1,11 @@
 import { useState } from "react";
+import type { FileExplorerType } from "../types/file";
 
 interface FolderProps {
   id: string;
   isFolder: boolean;
   name: string;
-  children?: {
-    id: string;
-    isFolder: boolean;
-    name: string;
-    children?: {
-      id: string;
-      isFolder: boolean;
-      name: string;
-    }[];
-  }[];
+  children?: FileExplorerType[];
   handleAddNewFolder: ({
     id,
     name,
@@ -32,26 +24,23 @@ export const Folder = ({
   children,
   handleAddNewFolder,
 }: FolderProps) => {
-  const [isOpen, setIsOpen] = useState<{
-    [x: string]: boolean;
-  }>({});
+  const [isOpen, setIsOpen] = useState(false);
   const [inputText, setInputText] = useState<string>("");
   const [inputDetails, setInputDetails] = useState({
     isOpen: false,
     isFolder: false,
   });
 
-  const handleOpenFolders = (idx: string) => {
-    setIsOpen((prev) => {
-      return {
-        ...prev,
-        [idx]: !prev[idx],
-      };
-    });
+  const handleOpenFolders = () => {
+    setIsOpen(!isOpen);
   };
 
-  const handleCreateNewFolder = (fileType: boolean) => {
-    // e.stopPropagation(); // prevent btns from expanding files
+  const handleCreateNewFolder = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+    fileType: boolean
+  ) => {
+    e.stopPropagation(); // prevent btns from expanding files
+    setIsOpen(true);
     setInputDetails(() => {
       return {
         isOpen: true,
@@ -75,31 +64,30 @@ export const Folder = ({
         name: inputText,
         isFolder: inputDetails?.isFolder,
       });
+
       handleClear();
     }
   };
 
   return (
     <div className="explorer">
-      <div className="explorer__container">
-        <div
-          className="explorer__filename"
-          onClick={() => handleOpenFolders(id)}
-        >
+      <div className="explorer__container" onClick={handleOpenFolders}>
+        <div className="explorer__filename">
+          {isFolder && <span> {!!isOpen ? "🔻" : "🔺"}</span>}
           {isFolder ? "📒" : "📄"}
           <p>{name}</p>
         </div>
         {isFolder && (
           <div className="explorer__actions">
             <button
-              className="explorer__actions--btn"
-              onClick={() => handleCreateNewFolder(true)}
+              className="explorer__button"
+              onClick={(e) => handleCreateNewFolder(e, true)}
             >
               Folder +
             </button>
             <button
-              className="explorer__actions--btn"
-              onClick={() => handleCreateNewFolder(false)}
+              className="explorer__button"
+              onClick={(e) => handleCreateNewFolder(e, false)}
             >
               File +
             </button>
@@ -107,32 +95,32 @@ export const Folder = ({
         )}
       </div>
 
-      {!!children?.length && isOpen[id] && (
-        <div className="explorer_folders">
-          {inputDetails?.isOpen && (
-            <div className="explorer__folders--input">
-              {inputDetails.isFolder ? "📒" : "📄"}
-              <input
-                className="explorer__input--container"
-                value={inputText}
-                onChange={(e) => setInputText(e.target.value)}
-                autoFocus
-                onBlur={() => handleClear()}
-                onKeyDown={handleSubmit}
-              />
-            </div>
-          )}
-          {children?.map((item) => (
+      <div className="explorer__folders">
+        {inputDetails?.isOpen && (
+          <div className="explorer__input__container">
+            {inputDetails.isFolder ? "📒" : "📄"}
+            <input
+              className="explorer__input"
+              value={inputText}
+              onChange={(e) => setInputText(e.target.value)}
+              autoFocus
+              onBlur={() => handleClear()}
+              onKeyDown={handleSubmit}
+            />
+          </div>
+        )}
+        {isOpen &&
+          children?.map((item) => (
             <Folder
               name={item?.name}
               isFolder={item?.isFolder}
               children={item?.children}
               id={item?.id}
               handleAddNewFolder={handleAddNewFolder}
+              key={item?.id}
             />
           ))}
-        </div>
-      )}
+      </div>
     </div>
   );
 };

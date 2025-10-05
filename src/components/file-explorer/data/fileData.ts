@@ -1,7 +1,6 @@
-import type { FileExplorer } from "./types";
+import type { FileExplorerType } from "../types/file";
 
-
-export const data: FileExplorer[] = [
+export const data: FileExplorerType[] = [
   {
     id: "1",
     isFolder: true,

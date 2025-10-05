@@ -1,9 +1,9 @@
-import { data } from "./data";
-import "./style.css";
-import { Folder } from "./Folder";
 import { useState } from "react";
-import useInsert from "./useInsert";
-import type { FileExplorerType } from "./types";
+import "../style.css";
+import { data } from "../data/fileData";
+import { Folder } from "../components/Folder";
+import useInsert from "../hooks/useInsert";
+import type { FileExplorerType } from "../types/file";
 
 export const FileExplorer = () => {
   const [folders, setFolders] = useState<FileExplorerType[]>(data);

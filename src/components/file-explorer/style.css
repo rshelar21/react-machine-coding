@@ -5,24 +5,10 @@
   gap: 10px;
   padding: 4px 0px;
 }
-
 .explorer__container:hover {
   background-color: #eee;
   cursor: pointer;
 }
-
-.explorer__actions {
-  display: flex;
-  flex-direction: row;
-  gap: 6px;
-  align-items: center;
-}
-
-.explorer__actions--btn {
-  padding: 4px;
-  cursor: pointer;
-}
-
 .explorer__filename {
   display: flex;
   flex-direction: row;
@@ -30,12 +16,23 @@
   gap: 10px;
   min-width: 100px;
 }
+.explorer__actions {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+}
 
-.explorer_folders {
+.explorer__button {
+  padding: 4px;
+  cursor: pointer;
+}
+
+.explorer__folders {
   padding-left: 10px;
 }
 
-.explorer__folders--input {
+.explorer__input__container {
   display: flex;
   flex-direction: row;
   align-items: center;
