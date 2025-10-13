@@ -1,0 +1,23 @@
+.progress {
+  width: 100%;
+  max-width: 400px;
+  margin: 100px auto;
+  border: 1px solid gray;
+  border-radius: 999px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress__inner {
+  position: absolute;
+  background: rgb(68, 227, 68);
+  inset: 0;
+  border-radius: 999px;
+  z-index: -10;
+  /* transform: translateX(100%); */
+  top: 0px;
+  bottom: 0px;
+  transition: all 200ms ease-in;
+}

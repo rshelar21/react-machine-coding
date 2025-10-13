@@ -1,7 +1,7 @@
 // import { FileExplorer } from "./components";
 // import { HomePagination } from "./components";
-
-import { PasswordGenerator } from "./components";
+// import { PasswordGenerator, ProgressBar } from "./components";
+import { ProgressBar } from "./components";
 
 function App() {
   return (
@@ -12,7 +12,8 @@ function App() {
     >
       {/* <FileExplorer /> */}
       {/* <HomePagination /> */}
-      <PasswordGenerator />
+      {/* <PasswordGenerator /> */}
+      <ProgressBar />
     </div>
   );
 }
