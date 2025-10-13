@@ -2,7 +2,9 @@
 // import { HomePagination } from "./components";
 // import { PasswordGenerator, ProgressBar } from "./components";
 // import { ProgressBar } from "./components";
-import { GridLight } from "./components";
+// import { GridLight } from "./components";
+
+import { Home } from "./components";
 
 function App() {
   return (
@@ -15,7 +17,8 @@ function App() {
       {/* <HomePagination /> */}
       {/* <PasswordGenerator /> */}
       {/* <ProgressBar /> */}
-      <GridLight />
+      {/* <GridLight /> */}
+      <Home/>
     </div>
   );
 }
