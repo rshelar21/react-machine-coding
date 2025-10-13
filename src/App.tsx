@@ -1,6 +1,7 @@
 // import { FileExplorer } from "./components";
+// import { HomePagination } from "./components";
 
-import { HomePagination } from "./components";
+import { PasswordGenerator } from "./components";
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       }}
     >
       {/* <FileExplorer /> */}
-      <HomePagination />
+      {/* <HomePagination /> */}
+      <PasswordGenerator />
     </div>
   );
 }
