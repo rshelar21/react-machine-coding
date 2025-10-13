@@ -1,0 +1,36 @@
+.products {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.product {
+  border: 1px solid gray;
+  padding: 8px;
+}
+
+.product img {
+  width: 200px;
+  height: 200px;
+}
+
+.products__pagination {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px 0px;
+}
+
+.pagination__btn {
+  padding: 4px 8px;
+  border: 1px solid gray;
+  cursor: pointer;
+}
+
+.pagination__btn--active {
+  background: blue;
+  color: white;
+}
+
+

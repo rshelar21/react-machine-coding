@@ -1,4 +1,6 @@
-import { FileExplorer } from "./components";
+// import { FileExplorer } from "./components";
+
+import { HomePagination } from "./components";
 
 function App() {
   return (
@@ -7,7 +9,8 @@ function App() {
         margin: "4px",
       }}
     >
-      <FileExplorer />
+      {/* <FileExplorer /> */}
+      <HomePagination />
     </div>
   );
 }
