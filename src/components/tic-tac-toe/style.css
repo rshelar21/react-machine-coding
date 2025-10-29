@@ -1,0 +1,23 @@
+body {
+    background: #fff;
+    font-family: sans-serif;
+}
+
+.gameboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  width: 300px;
+  margin: auto;
+}
+
+.gameboard__cells {
+  width: 100px;
+  height: 100px;
+  font-size: 36px;
+  border: 2px solid grey;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  background: white;
+  color: black;
+}
