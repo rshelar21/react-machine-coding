@@ -6,8 +6,29 @@
 // import { Home } from "./components";
 // import { TicTacToe } from "./components";
 // import { MyInput } from "./components";
+// import { AccordianPage } from "./components";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { HomePage, UsersDetailsPage, UsersPage, RootLayout } from "./components";
 
-import { AccordianPage } from "./components";
+const router = createBrowserRouter([
+  {
+    element: <RootLayout />,
+    children: [
+      {
+        path: "/",
+        element: <HomePage />,
+      },
+      {
+        path: "/users",
+        element: <UsersPage />,
+      },
+      {
+        path: "/users/:id",
+        element: <UsersDetailsPage />,
+      },
+    ],
+  },
+]);
 
 function App() {
   return (
@@ -24,7 +45,9 @@ function App() {
       {/* <Home/> */}
       {/* <TicTacToe /> */}
       {/* <MyInput/> */}
-      <AccordianPage />
+      {/* <AccordianPage /> */}
+   
+      <RouterProvider router={router} />
     </div>
   );
 }

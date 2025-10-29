@@ -7,3 +7,9 @@ export { Home } from "./dark-theme/components/Home";
 export { TicTacToe } from "./tic-tac-toe/components/TicTacToe";
 export { MyInput } from "./use-debounce/components/MyInput";
 export { AccordianPage } from "./accordion/components/AccordianPage";
+// breadcrumbs
+export { HomePage } from "./breadcrumbs/components/HomePage";
+export { UsersPage } from "./breadcrumbs/components/UsersPage";
+export { UsersDetailsPage } from "./breadcrumbs/components/UsersDetailsPage";
+export { Breadcrumbs } from "./breadcrumbs/components/Breadcrumbs";
+export { RootLayout } from "./breadcrumbs/components/RootLayout";
