@@ -7,28 +7,29 @@
 // import { TicTacToe } from "./components";
 // import { MyInput } from "./components";
 // import { AccordianPage } from "./components";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { HomePage, UsersDetailsPage, UsersPage, RootLayout } from "./components";
+// import { createBrowserRouter, RouterProvider } from "react-router-dom";
+// import { HomePage, UsersDetailsPage, UsersPage, RootLayout } from "./components";
 
-const router = createBrowserRouter([
-  {
-    element: <RootLayout />,
-    children: [
-      {
-        path: "/",
-        element: <HomePage />,
-      },
-      {
-        path: "/users",
-        element: <UsersPage />,
-      },
-      {
-        path: "/users/:id",
-        element: <UsersDetailsPage />,
-      },
-    ],
-  },
-]);
+// const router = createBrowserRouter([
+//   {
+//     element: <RootLayout />,
+//     children: [
+//       {
+//         path: "/",
+//         element: <HomePage />,
+//       },
+//       {
+//         path: "/users",
+//         element: <UsersPage />,
+//       },
+//       {
+//         path: "/users/:id",
+//         element: <UsersDetailsPage />,
+//       },
+//     ],
+//   },
+// ]);
+import { ModalPage } from "./components";
 
 function App() {
   return (
@@ -46,8 +47,9 @@ function App() {
       {/* <TicTacToe /> */}
       {/* <MyInput/> */}
       {/* <AccordianPage /> */}
-   
-      <RouterProvider router={router} />
+
+      {/* <RouterProvider router={router} /> */}
+      <ModalPage />
     </div>
   );
 }

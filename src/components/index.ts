@@ -13,3 +13,5 @@ export { UsersPage } from "./breadcrumbs/components/UsersPage";
 export { UsersDetailsPage } from "./breadcrumbs/components/UsersDetailsPage";
 export { Breadcrumbs } from "./breadcrumbs/components/Breadcrumbs";
 export { RootLayout } from "./breadcrumbs/components/RootLayout";
+// modal
+export { ModalPage } from "./modal/components/ModalPage";
