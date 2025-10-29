@@ -7,6 +7,8 @@
 // import { TicTacToe } from "./components";
 // import { MyInput } from "./components";
 
+import { AccordianPage } from "./components";
+
 function App() {
   return (
     <div
@@ -22,6 +24,7 @@ function App() {
       {/* <Home/> */}
       {/* <TicTacToe /> */}
       {/* <MyInput/> */}
+      <AccordianPage />
     </div>
   );
 }

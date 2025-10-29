@@ -1,0 +1,30 @@
+.accordion__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.accordion {
+  width: 100%;
+  max-width: 550px;
+  border: 1px solid gray;
+}
+
+.accordion__container {
+  padding: 4px 10px;
+  border-bottom: 1px solid gray;
+  cursor: pointer;
+}
+
+.accordion__container:last-child {
+  border-bottom-width: 0px;
+}
+
+.accordion__body {
+  padding: 10px 0px;
+}
+
+.accordion__button {
+  background: transparent;
+  padding: 4px;
+}
