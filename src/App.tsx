@@ -3,8 +3,9 @@
 // import { PasswordGenerator, ProgressBar } from "./components";
 // import { ProgressBar } from "./components";
 // import { GridLight } from "./components";
-
-import { Home } from "./components";
+// import { Home } from "./components";
+// import { TicTacToe } from "./components";
+// import { MyInput } from "./components";
 
 function App() {
   return (
@@ -18,7 +19,9 @@ function App() {
       {/* <PasswordGenerator /> */}
       {/* <ProgressBar /> */}
       {/* <GridLight /> */}
-      <Home/>
+      {/* <Home/> */}
+      {/* <TicTacToe /> */}
+      {/* <MyInput/> */}
     </div>
   );
 }
