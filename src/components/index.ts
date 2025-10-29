@@ -15,3 +15,5 @@ export { Breadcrumbs } from "./breadcrumbs/components/Breadcrumbs";
 export { RootLayout } from "./breadcrumbs/components/RootLayout";
 // modal
 export { ModalPage } from "./modal/components/ModalPage";
+// otp
+export { OtpPage } from "./otp/components/OtpPage";

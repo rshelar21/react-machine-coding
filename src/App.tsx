@@ -10,6 +10,8 @@
 // import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // import { HomePage, UsersDetailsPage, UsersPage, RootLayout } from "./components";
 
+import { OtpPage } from "./components";
+
 // const router = createBrowserRouter([
 //   {
 //     element: <RootLayout />,
@@ -29,7 +31,7 @@
 //     ],
 //   },
 // ]);
-import { ModalPage } from "./components";
+// import { ModalPage } from "./components";
 
 function App() {
   return (
@@ -49,7 +51,8 @@ function App() {
       {/* <AccordianPage /> */}
 
       {/* <RouterProvider router={router} /> */}
-      <ModalPage />
+      {/* <ModalPage /> */}
+      <OtpPage />
     </div>
   );
 }
