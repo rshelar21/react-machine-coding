@@ -10,7 +10,7 @@
 // import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // import { HomePage, UsersDetailsPage, UsersPage, RootLayout } from "./components";
 
-import { OtpPage } from "./components";
+// import { OtpPage } from "./components";
 
 // const router = createBrowserRouter([
 //   {
@@ -32,13 +32,16 @@ import { OtpPage } from "./components";
 //   },
 // ]);
 // import { ModalPage } from "./components";
+import { ToastPage } from "./components";
 
 function App() {
   return (
     <div
-      style={{
-        margin: "4px",
-      }}
+      style={
+        {
+          // margin: "4px",
+        }
+      }
     >
       {/* <FileExplorer /> */}
       {/* <HomePagination /> */}
@@ -52,7 +55,8 @@ function App() {
 
       {/* <RouterProvider router={router} /> */}
       {/* <ModalPage /> */}
-      <OtpPage />
+      {/* <OtpPage /> */}
+      <ToastPage />
     </div>
   );
 }

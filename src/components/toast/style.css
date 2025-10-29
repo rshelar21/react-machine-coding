@@ -1,0 +1,90 @@
+.top-right {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+.top-left {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+.bottom-left {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+}
+.bottom-right {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+.success {
+  background-color: green;
+  color: white;
+}
+.error {
+  background-color: red;
+  color: white;
+}
+.warning {
+  background-color: yellow;
+  color: black;
+}
+.info {
+  background-color: grey;
+  color: white;
+}
+.notification__popup {
+  padding: 8px;
+  border-radius: 4px;
+  display: flex;
+  align-items: start;
+  gap: 4px;
+}
+.notification__button {
+  background: transparent;
+}
+.notification__page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fadeIn {
+  animation: fadeIn 0.5s;
+}
+.popup {
+  animation: popup 0.5s ease-out;
+}
+.slideIn {
+  animation: slideIn 0.5s ease-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popup {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

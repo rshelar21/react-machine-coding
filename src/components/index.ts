@@ -17,3 +17,5 @@ export { RootLayout } from "./breadcrumbs/components/RootLayout";
 export { ModalPage } from "./modal/components/ModalPage";
 // otp
 export { OtpPage } from "./otp/components/OtpPage";
+// toast
+export { ToastPage } from "./toast/components/ToastPage";
